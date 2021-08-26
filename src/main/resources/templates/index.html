@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Raleway:wght@500&display=swap"
+          rel="stylesheet">
+    <title>Would you survive the zombie apocalypse?</title>
+</head>
+<body>
+    <div class="page">
+
+        <header>
+            <h1>Would you survive the zombie apocalypse?</h1>
+        </header>
+
+        <center>
+            <form name="myform" method="post">
+                <div class="container">
+                    <h3>Are you woman or man?</h3>
+                    <div class="selector">
+                        <input id="woman2" type="radio" name="gender" value="woman"/>
+                        <label class="drinkcard-cc woman" for="woman2"></label>
+
+                        <input id="man2" type="radio" name="gender" value="man"/>
+                        <label class="drinkcard-cc man" for="man2"></label>
+                    </div>
+                </div>
+
+                <div class="age">
+                    <h3>How old are you?</h3>
+                    <p id="value">18</p>
+                    <div class="skala">
+                        <input class="slider" id="valueChoise" name="age" type="range" min="1" max="100"
+                               value="18"/>
+                    </div>
+
+                    <script type="text/javascript">
+                        var slider = document.getElementById("valueChoise");
+                        var output = document.getElementById("value");
+                        output.innerHTML = slider.value;
+                        slider.oninput = function () {
+                            output.innerHTML = this.value;
+                        }
+                    </script>
+                </div>
+
+                <div class="shape">
+                    <h3>Are you in a good shape?</h3>
+                    <h4>I can lift:</h4>
+                    <label class="inline-radio">
+                        <input type="radio" name="strength" value="50">
+                        <span class="label-body">50 kg</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="strength" value="70">
+                        <span class="label-body">70 kg</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="strength" value="90">
+                        <span class="label-body">90 kg</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="strength" value="100">
+                        <span class="label-body">100+ kg</span>
+                    </label>
+
+
+                    <h4>I can run:</h4>
+                    <label class="inline-radio">
+                        <input type="radio" name="endurance" value="walker">
+                        <span class="label-body">I don´t run, I walk</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="endurance" value="runner">
+                        <span class="label-body">I run sometimes</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="endurance" value="marathoner">
+                        <span class="label-body">I run marathones</span>
+                    </label>
+
+                    <label class="inline-radio">
+                        <input type="radio" name="endurance" value="sprinter">
+                        <span class="label-body">I am a sprinter</span>
+                    </label>
+                </div>
+
+
+                <div class="weapons">
+                    <h3>What weapon would you choose to fight a zombie?</h3>
+
+                    <div class="selector">
+                        <input id="axe2" type="radio" name="weapon" value="axe"/>
+                        <label class="drinkcard-cc axe" for="axe2"></label>
+
+                        <input id="bat2" type="radio" name="weapon" value="bat"/>
+                        <label class="drinkcard-cc bat" for="bat2"></label>
+
+                        <input id="chainsaw2" type="radio" name="weapon" value="chainsaw"/>
+                        <label class="drinkcard-cc chainsaw" for="chainsaw2"></label>
+
+                        <input id="colt2" type="radio" name="weapon" value="colt"/>
+                        <label class="drinkcard-cc colt" for="colt2"></label>
+
+                        <input id="knife2" type="radio" name="weapon" value="knife"/>
+                        <label class="drinkcard-cc knife" for="knife2"></label>
+
+                        <input id="crossbow2" type="radio" name="weapon" value="crossbow"/>
+                        <label class="drinkcard-cc crossbow" for="crossbow2"></label>
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
+            <footer class="footer">Created by Zombielenka, 2020</footer>
+    </div>
+    </center>
+</body>
+</html>
